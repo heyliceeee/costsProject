@@ -15,6 +15,7 @@ function Navbar() {
 
                 <ul className={styles.list}>
                     <li className={styles.item}><Link to="/">Home</Link></li>
+                    <li className={styles.item}><Link to="/projects">Projects</Link></li>
                     <li className={styles.item}><Link to="/company">Company</Link></li>
                     <li className={styles.item}><Link to="/contactus">Contact Us</Link></li>
                     {/* <li className={styles.item}><Link to="/newproject">New Project</Link></li> */}
