@@ -13,6 +13,8 @@ import Loading from '../layout/Loading';
 function Projects() {
     const [projects, setProjects] = useState([]);//guardar os projetos
     const [removeLoading, setRemoveLoading] = useState(false); //como o loading vai ser mostrado e removido, temos q trabalhar com o state
+    const [projectMessage, setProjectMessage] = useState('');
+
 
     //ler o que está no newProject
     const location = useLocation();
@@ -49,9 +51,9 @@ function Projects() {
             'Content-Type': 'application/json',
         },
         }).then((resp) => resp.json())
-        .then((data) => {
+        .then(() => {
             setProjects(projects.filter((project) => project.id !== id));
-            //msg de removoção
+            setProjectMessage('Project removed successfully!');
         })
         .catch((err) => console.log(err));
     }
@@ -64,6 +66,7 @@ function Projects() {
             </div>
 
             {message && <Message type="success" msg={message}/>}
+            {projectMessage && <Message type="success" msg={projectMessage}/>}
 
             <Container customClass="start">
                 {projects.length > 0 && 
