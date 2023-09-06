@@ -18,6 +18,11 @@ function Projects() {
     const location = useLocation();
     let message = '';
 
+    //se tiver alguma coisa no state, vou verificar se a message existe
+    if(location.state){
+        message = location.state.message;
+    }
+
     useEffect(() => {
         setTimeout(() => {
             fetch('http://localhost:5000/projects', {
@@ -28,16 +33,27 @@ function Projects() {
             }).then((resp) => resp.json())
               .then((data) => {
                 console.log(data);
-                setProjects(data)
+                setProjects(data);
                 setRemoveLoading(true);
             })
             .catch((err) => console.log(err))
         }, 300)
     }, []);
 
-    //se tiver alguma coisa no state, vou verificar se a message existe
-    if(location.state){
-        message = location.state.message;
+
+    //remover projeto por id
+    function removeProject (id){
+        fetch(`http://localhost:5000/projects/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        }).then((resp) => resp.json())
+        .then((data) => {
+            setProjects(projects.filter((project) => project.id !== id));
+            //msg de removoção
+        })
+        .catch((err) => console.log(err));
     }
 
     return (
@@ -52,7 +68,7 @@ function Projects() {
             <Container customClass="start">
                 {projects.length > 0 && 
                 projects.map((project) => 
-                    <ProjectCard id={project.id} name={project.name} budget={project.budget} category={project.category.name} key={project.id}/>
+                    <ProjectCard id={project.id} name={project.name} budget={project.budget} category={project.category.name} key={project.id} handleRemove={removeProject}/>
                 )}
                 {!removeLoading && <Loading/>}
                 {removeLoading && projects.length === 0 && (
