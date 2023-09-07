@@ -7,7 +7,7 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 200,
+      "cost": 1242,
       "services": [
         {
           "name": "my new service",
@@ -20,6 +20,18 @@
           "cost": "100",
           "description": "do this",
           "id": "c1098b2c-34c3-4440-9bfb-7fa0c2a28193"
+        },
+        {
+          "name": "asd",
+          "cost": "521",
+          "description": "do this",
+          "id": "f8c7bc56-8d72-41ca-8151-f6e6397455a5"
+        },
+        {
+          "name": "asd",
+          "cost": "521",
+          "description": "do this",
+          "id": "f8c7bc56-8d72-41ca-8151-f6e6397455a5"
         }
       ],
       "id": 3

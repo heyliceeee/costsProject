@@ -67,6 +67,8 @@ function Project() {
 
     //criar servico (adicionar ao projeto)
     function createService() {
+        setMessage('');
+
         //validar servico
         const lastService = project.services[project.services.length - 1]; //ultimo servico
 
