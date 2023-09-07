@@ -54,8 +54,21 @@
         "id": "4",
         "name": "Planning"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 150,
+      "services": [
+        {
+          "name": "hire php dev",
+          "cost": "100",
+          "description": "will create the email sending function",
+          "id": "d10e516c-47cd-4cf6-b84c-093069fb1990"
+        },
+        {
+          "name": "new service",
+          "cost": "50",
+          "description": "test",
+          "id": "701e16fc-f154-40f3-9ebc-411c1b77cd05"
+        }
+      ],
       "id": 5
     }
   ],

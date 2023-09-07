@@ -9,6 +9,7 @@ import Container from './../layout/Container';
 import ProjectForm from './../project/ProjectForm';
 import Message from './../layout/Message';
 import ServiceForm from '../service/ServiceForm';
+import ServiceCard from '../service/ServiceCard';
 
 function Project() {
 
@@ -18,6 +19,7 @@ function Project() {
     const [message, setMessage] = useState();
     const [type, setType] = useState();
     const [showServiceForm, setShowServiceForm] = useState(false);
+    const [services, setServices] = useState([]);
 
     //obter o projeto selecionado
     useEffect(() => {
@@ -30,6 +32,7 @@ function Project() {
             }).then((resp) => resp.json())
             .then((data) => {
                 setProject(data);
+                setServices(data.services);
             })
             .catch((err) => console.log(err))
         }, 300);
@@ -97,14 +100,19 @@ function Project() {
         }).then((resp) => resp.json())
             .then((data) => {
                 //mostrar os servicos
-                console.log(data);
+                setShowServiceForm(false);
                 /* setProject(data);
-                setShowProjectForm(false);
+                
                 
                 setMessage('Project updated!');
                 setType('success'); */
         })
         .catch((err) => console.log(err));
+    }
+
+    //remover servico
+    function removeService() {
+        
     }
 
     // mostrar/esconder formulario de projeto
@@ -132,15 +140,9 @@ function Project() {
                     </button> 
                     {!showProjectForm ?
                     (<div className={styles.project_info}>
-                        <p>
-                            <span>Category:</span> {project.category.name}
-                        </p>
-                        <p>
-                            <span>Total Budget:</span> {project.budget}€
-                        </p>
-                        <p>
-                            <span>Total Used:</span> {project.cost}€
-                        </p>
+                        <p><span>Category:</span> {project.category.name}</p>
+                        <p><span>Total Budget:</span> {project.budget}€</p>
+                        <p><span>Total Used:</span> {project.cost}€</p>
                     </div>) 
                     : 
                     (<div className={styles.project_info}>
@@ -161,7 +163,12 @@ function Project() {
 
                 <h2>Services</h2>
                 <Container customClass="start">
-                    <p>Service items</p>
+                    {services.length > 0 &&
+                        services.map((service) => (
+                            <ServiceCard id={service.id} name={service.name} cost={service.cost} description={service.description} key={service.id} handleRemove={removeService}/>
+                        ))
+                    }
+                    {services.length === 0 && <p>There are no services created.</p>}
                 </Container>
             </Container>
         </div>
