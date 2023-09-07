@@ -2,13 +2,26 @@
   "projects": [
     {
       "name": "project updated",
-      "budget": "13000",
+      "budget": "7000",
       "category": {
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 200,
+      "services": [
+        {
+          "name": "my new service",
+          "cost": "100",
+          "description": "do this",
+          "id": "824d2f12-bc1b-4f36-9f35-59e5efec4d55"
+        },
+        {
+          "name": "my new service 2",
+          "cost": "100",
+          "description": "do this",
+          "id": "c1098b2c-34c3-4440-9bfb-7fa0c2a28193"
+        }
+      ],
       "id": 3
     },
     {
