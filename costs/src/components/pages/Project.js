@@ -39,6 +39,8 @@ function Project() {
 
 
     function editProject(project){
+        setMessage('');
+
         //budget validation
 
         if(project.budget < project.cost){
