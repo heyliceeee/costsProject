@@ -1,33 +1,61 @@
 {
   "projects": [
     {
-      "name": "new project",
-      "budget": "900",
       "category": {
-        "id": "4",
-        "name": "Planning"
+        "id": "1",
+        "name": "Infra"
       },
+      "name": "Data Center Modernization",
+      "budget": "2000000",
       "cost": 0,
       "services": [],
-      "id": 4
+      "id": 7
     },
     {
-      "name": "project 2",
-      "budget": "200",
+      "category": {
+        "id": "2",
+        "name": "Development"
+      },
+      "name": "Quantum Inventory Management System",
+      "budget": "250000",
+      "cost": 0,
+      "services": [],
+      "id": 8
+    },
+    {
       "category": {
         "id": "4",
         "name": "Planning"
       },
-      "cost": 100,
+      "name": "Central City Park Development",
+      "budget": "2000000",
+      "cost": 0,
+      "services": [],
+      "id": 9
+    },
+    {
+      "name": "Urban Oasis Café Redesign",
+      "budget": "50000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 15000,
       "services": [
         {
-          "name": "hire php dev",
-          "cost": "100",
-          "description": "will create the email sending function",
-          "id": "d10e516c-47cd-4cf6-b84c-093069fb1990"
+          "name": "Interior Design",
+          "cost": "10000",
+          "description": "Complete redesign of the café's interior space, incorporating modern aesthetics and functionality to create a comfortable and appealing environment for customers.",
+          "id": "cfd6ac00-e29d-4e62-8ef7-b98e17f0924a"
+        },
+        {
+          "name": "Branding and Logo Design",
+          "cost": "5000",
+          "description": "Refreshing the café's branding and logo to align with the new design theme and promote brand consistency across all platforms.",
+          "id": "3ee24f62-a234-4b74-a497-6e6f90e2487b"
         }
       ],
-      "id": 5
+      "id": 10
     }
   ],
   "categories": [
