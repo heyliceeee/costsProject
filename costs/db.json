@@ -1,42 +1,6 @@
 {
   "projects": [
     {
-      "name": "project updated",
-      "budget": "7000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 1242,
-      "services": [
-        {
-          "name": "my new service",
-          "cost": "100",
-          "description": "do this",
-          "id": "824d2f12-bc1b-4f36-9f35-59e5efec4d55"
-        },
-        {
-          "name": "my new service 2",
-          "cost": "100",
-          "description": "do this",
-          "id": "c1098b2c-34c3-4440-9bfb-7fa0c2a28193"
-        },
-        {
-          "name": "asd",
-          "cost": "521",
-          "description": "do this",
-          "id": "f8c7bc56-8d72-41ca-8151-f6e6397455a5"
-        },
-        {
-          "name": "asd",
-          "cost": "521",
-          "description": "do this",
-          "id": "f8c7bc56-8d72-41ca-8151-f6e6397455a5"
-        }
-      ],
-      "id": 3
-    },
-    {
       "name": "new project",
       "budget": "900",
       "category": {
@@ -54,19 +18,13 @@
         "id": "4",
         "name": "Planning"
       },
-      "cost": 150,
+      "cost": 100,
       "services": [
         {
           "name": "hire php dev",
           "cost": "100",
           "description": "will create the email sending function",
           "id": "d10e516c-47cd-4cf6-b84c-093069fb1990"
-        },
-        {
-          "name": "new service",
-          "cost": "50",
-          "description": "test",
-          "id": "701e16fc-f154-40f3-9ebc-411c1b77cd05"
         }
       ],
       "id": 5

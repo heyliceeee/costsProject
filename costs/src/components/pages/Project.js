@@ -111,8 +111,29 @@ function Project() {
     }
 
     //remover servico
-    function removeService() {
-        
+    function removeService(id, cost) {
+        //atualizar servicos atuais (filtrar pra mostrar apenas os servicos exceto aquele "removido")
+        const servicesUpdated = project.services.filter(
+            (service) => service.id !== id
+        );
+
+        const projectUpdated = project; //projeto atual
+        projectUpdated.services = servicesUpdated; //servicos vai conter apenas os servicesUpdate
+        projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost); //custo vai conter o custo atual do projeto - custo do servico "removido"
+
+        fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+            method: 'PATCH',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(projectUpdated),
+            }).then((resp) => resp.json())
+            .then((data) => {
+                setProject(projectUpdated);
+                setServices(servicesUpdated);
+
+                setMessage('Service removed successfully!');
+                setType('success');
+            })
+            .catch((err) => console.log(err))
     }
 
     // mostrar/esconder formulario de projeto
