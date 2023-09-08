@@ -21,8 +21,8 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Home/>}/>
           <Route path='/projects' element={<Projects/>}/>
-          <Route path='/company' element={<Company/>}/>
-          <Route path='/contactus' element={<ContactUs/>}/>
+          {/* <Route path='/company' element={<Company/>}/>
+          <Route path='/contactus' element={<ContactUs/>}/> */}
           <Route path='/newproject' element={<NewProject/>}/>
           <Route path='/project/:id' element={<Project/>}/>
         </Routes>
