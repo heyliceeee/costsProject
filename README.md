@@ -18,27 +18,27 @@ Desenvolver um sistema em React que gere projetos, os seus serviços e custos.
 
 ### Criar projeto
 
-![HomePage](/assets/CreateProject.png)
+![CreateProject](/assets/CreateProject.png)
 
 
 ### Projetos
 
-![HomePage](/assets/Projects.png)
+![Projects](/assets/Projects.png)
 
 
 ### Projeto
 
-![HomePage](/assets/Project.png)
+![Project](/assets/Project.png)
 
 
 ### Projeto - editar
 
-![HomePage](/assets/EditProject.png)
+![EditProject](/assets/EditProject.png)
 
 
 ### Projeto - criar servico
 
-![HomePage](/assets/CreateServiceProject.png)
+![CreateServiceProject](/assets/CreateServiceProject.png)
 
 
 ## API
