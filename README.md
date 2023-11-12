@@ -7,36 +7,36 @@
 - HTML
 - CSS
 
-## Objetivo
-Desenvolver um sistema em React que gere projetos, os seus serviços e custos.
+## Goal
+Develop a React system that manages projects, their services and costs.
 
 ## Website
-### Página Inicial
+### Home Page
 
 ![HomePage](/assets/Homepage.png)
 
 
-### Criar projeto
+### Create project
 
 ![CreateProject](/assets/CreateProject.png)
 
 
-### Projetos
+### Projects
 
 ![Projects](/assets/Projects.png)
 
 
-### Projeto
+### Project
 
 ![Project](/assets/Project.png)
 
 
-### Projeto - editar
+### Project - edit
 
 ![EditProject](/assets/EditProject.png)
 
 
-### Projeto - criar servico
+### Project - create service
 
 ![CreateServiceProject](/assets/CreateServiceProject.png)
 
